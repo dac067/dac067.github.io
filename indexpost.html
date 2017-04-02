@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-gallery">
+    {% for post in site.categories.projects %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <img class="post-thumbnail" src="{{ site.url}}/assets/{{ post.thumbnail }}" alt= "{{ post.thumbnail }}" >
+        </a>
+      </li>
+    {% endfor %}
+
+  </ul>
+
+
+</div>

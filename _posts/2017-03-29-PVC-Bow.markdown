@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "PVC Bow"
+date: 2017-03-29
+categories: etc
+thumbnail: bow1.jpg
+---
+![post-image]({{site.url}}/assets/bow1.jpg)
+
+This is a recurve bow made from schedule-40 PVC pipe. The pipe was heated with a heatgun until pliable and then molded into shape. It was built by following BackyardBowyer's tutorial on Youtube. I used around six strands of Dacron fishing line for the string. The bow has a draw weight of twenty pounds and doesn't shoot very well.
+
+![]({{site.url}}/assets/bow2.jpg)
+
+This project was completed in the summer of 2012.

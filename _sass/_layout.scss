@@ -1,6 +1,32 @@
 /**
  * Site header
  */
+.post-gallery{
+  img{
+    height:         calc(33% - (#{$spacing-unit} / 2));
+    height: -webkit-calc(33% - (#{$spacing-unit} / 2));
+  }
+
+  .col-4{
+    display: inline-block;
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    width:         calc(30% - (#{$spacing-unit} / 2));
+    margin: 20px;
+  }
+
+  .row{
+    margin-bottom: 10px;
+  }
+
+
+  h2{
+    margin-bottom: 0px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+}
+
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -9,6 +35,16 @@
     // Positioning context for the mobile navigation icon
     position: relative;
 }
+
+.post-thumbnail {
+  height: 400px;
+  width: 600px;
+}
+
+.home .post-thumbnail{
+  margin-bottom: #{$spacing-unit};
+}
+
 
 .site-title {
     font-size: 26px;
@@ -172,7 +208,7 @@
 }
 
 .page-heading {
-    font-size: 20px;
+    font-size: 26px;
 }
 
 .post-list {
@@ -187,10 +223,12 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    display: block;
+    margin-bottom: 0px;
+
 }
 
 .post-link {
-    display: block;
     font-size: 24px;
 }
 
@@ -204,9 +242,10 @@
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 26px;
     letter-spacing: -1px;
     line-height: 1;
+    margin-bottom: 0px;
 
     @include media-query($on-laptop) {
         font-size: 36px;

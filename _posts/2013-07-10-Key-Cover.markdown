@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Key Cover"
+date: 2013-07-10
+categories: woodworking
+thumbnail: key1.jpg
+---
+
+![post-image]({{site.url}}/assets/key1.jpg)
+
+![post-image]({{site.url}}/assets/key3.jpg)
+
+![post-image]({{site.url}}/assets/key2.jpg)
+
+Made from yellowheart. <br>
+A questionable build on my part. <br>
+Completed 2013.

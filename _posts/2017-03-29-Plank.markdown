@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Plank"
+date: 2017-03-29
+categories: woodworking
+thumbnail: plank.jpg
+---
+![post-image]({{site.url}}/assets/plank.jpg)
+
+Marker on maple. <br>
+Competed 2013.
