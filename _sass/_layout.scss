@@ -2,16 +2,17 @@
  * Site header
  */
 .post-gallery{
-  img{
-    height:         calc(33% - (#{$spacing-unit} / 2));
-    height: -webkit-calc(33% - (#{$spacing-unit} / 2));
+  .post-thumbnail{
+    height: 14rem;
+    width: 21rem;
+
   }
 
   .col-4{
     display: inline-block;
-    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-    width:         calc(30% - (#{$spacing-unit} / 2));
     margin: 20px;
+    width:         calc(30% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
   }
 
   .row{
