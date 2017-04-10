@@ -37,8 +37,9 @@
 }
 
 .post-thumbnail {
-  height: 400px;
-  width: 600px;
+
+    width:         calc(70% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(70% - (#{$spacing-unit} / 2));
 }
 
 .home .post-thumbnail{
@@ -175,6 +176,10 @@
 .footer-col-3 {
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+.footer-right {
+    float:right;
 }
 
 @include media-query($on-laptop) {
