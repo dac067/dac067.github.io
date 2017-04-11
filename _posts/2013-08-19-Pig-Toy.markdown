@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Pig Toy"
+date: 2013-08-19
+categories: woodworking
+thumbnail: pig1.jpg
+---
+![post-image]({{site.url}}/assets/pig1.jpg)
+
+![post-image]({{site.url}}/assets/pig2.jpg)
+
+Laminated Poplar. <br>
+Competed 2013.
