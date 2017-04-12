@@ -21,7 +21,7 @@ Glue was spread over each surface of the plywood layers. The layers were stacked
 and forced into place. I did not have enough clamps hold the press together, so I just placed heavy objects on top. The heavy objects
 I had around were cement bags, nail bins, toolboxes, etc.
 
-![]({{site.url}}/assets/skatepress3.jpg)
+![post-image]({{site.url}}/assets/skatepress3.jpg)
 
 When the glue finally dried, I slapped a template over the curved plywood and cut it out with a jigsaw.
 

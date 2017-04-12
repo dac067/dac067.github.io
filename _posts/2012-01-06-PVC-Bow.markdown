@@ -11,6 +11,6 @@ This is a recurve bow made from schedule-40 PVC pipe. The pipe was heated with a
 
 ![post-image]({{site.url}}/assets/bow4.jpg)
 
-![]({{site.url}}/assets/bow2.jpg)
+![post-image]({{site.url}}/assets/bow2.jpg)
 
 This project was completed in the summer of 2012.

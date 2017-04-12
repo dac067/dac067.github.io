@@ -21,8 +21,16 @@ img[alt="none"]{
 }
 
 img[alt=post-image]{
-  width: 800px;
-  height: 600px;
+  width: -webkit-calc(85%);
+  width:         calc(85%);
+
+}
+
+img[alt=post-image-vert]{
+  width: -webkit-calc(85%);
+  width:         calc(85%);
+
+
 }
 
 // Our variables

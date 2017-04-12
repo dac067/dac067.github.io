@@ -3,17 +3,16 @@
  */
 .post-gallery{
   .post-thumbnail{
-    height: 10.66rem;
-    width: 16rem;
-    text-align: center;
+
+    width: 100%;
 
   }
 
   .col-4{
     display: inline-block;
     margin: 20px;
-
-
+    width:         calc(30% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
   }
 
   .row{
