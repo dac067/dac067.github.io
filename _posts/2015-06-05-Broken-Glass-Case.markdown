@@ -11,4 +11,6 @@ thumbnail: emergency.jpg
 This was built as a final project for art class. It is a plywood box that holds 4 layers of
 glass. Each pane of glass was spray painted with the text "In Case of Emergency Break Glass". The 3 back glass layers were each laminated and the smashed.
 
+This piece was displayed at the Musuem of Contemporary Art San Diego on May 5, 2016.
+
 ![post-image]({{site.url}}/assets/emergency2.jpg)
