@@ -13,6 +13,8 @@
     margin: 20px;
     width:         calc(30% - (#{$spacing-unit} / 2));
     width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    height:         calc(20% - (#{$spacing-unit} / 2));
+    height: -webkit-calc(20% - (#{$spacing-unit} / 2));
   }
 
   .row{
