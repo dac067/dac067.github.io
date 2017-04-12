@@ -24,7 +24,7 @@
    width:         calc(85%);
 
  }
- 
+
 .post-gallery{
   .post-thumbnail{
     width: 100%;
@@ -51,8 +51,9 @@
 
   h2{
     margin-bottom: 0px;
-    font-size: 10px;
     text-align: center;
+
+    white-space: nowrap;
   }
 
 }
