@@ -2,7 +2,7 @@
 layout: post
 title:  "MIDI Ondes Martenot"
 date: 2016-09-20
-categories: [front, woodworking, electronics]
+categories: [front, electronics]
 thumbnail: ondes.jpg
 ---
 
