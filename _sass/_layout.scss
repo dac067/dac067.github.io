@@ -5,16 +5,15 @@
   .post-thumbnail{
     height: 10.66rem;
     width: 16rem;
+    text-align: center;
 
   }
 
   .col-4{
     display: inline-block;
     margin: 20px;
-    width:         calc(30% - (#{$spacing-unit} / 2));
-    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-    height:         calc(20% - (#{$spacing-unit} / 2));
-    height: -webkit-calc(20% - (#{$spacing-unit} / 2));
+
+
   }
 
   .row{
@@ -40,7 +39,6 @@
 }
 
 .post-thumbnail {
-
     width:         calc(70% - (#{$spacing-unit} / 2));
     width: -webkit-calc(70% - (#{$spacing-unit} / 2));
 }
