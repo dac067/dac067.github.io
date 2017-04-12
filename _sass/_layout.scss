@@ -1,6 +1,30 @@
 /**
  * Site header
  */
+
+ img[alt=about-image]{
+   display: inline-block;
+   width: -webkit-calc(45%);
+   width:         calc(45%);
+   float: right;
+ }
+
+ .about-text{
+   display: inline-block;
+   width: -webkit-calc(45%);
+   width:         calc(45%);
+   float: left;
+ }
+ img[alt="none"]{
+   display: none;
+ }
+
+ img[alt=post-image]{
+   width: -webkit-calc(85%);
+   width:         calc(85%);
+
+ }
+ 
 .post-gallery{
   .post-thumbnail{
     width: 100%;
@@ -15,8 +39,8 @@
     width: -webkit-calc(30% - (#{$spacing-unit} / 2));
 
     @include media-query($on-palm){
-      width:         calc(80% - (#{$spacing-unit} / 2));
-      width: -webkit-calc(80% - (#{$spacing-unit} / 2));
+      width:         calc(90% - (#{$spacing-unit} / 2));
+      width: -webkit-calc(90% - (#{$spacing-unit} / 2));
     }
   }
 
@@ -47,8 +71,8 @@
     width: -webkit-calc(70% - (#{$spacing-unit} / 2));
 
     @include media-query($on-palm){
-      width:         calc(70% - (#{$spacing-unit} / 2));
-      width: -webkit-calc(70% - (#{$spacing-unit} / 2));
+      width:         calc(90% - (#{$spacing-unit} / 2));
+      width: -webkit-calc(90% - (#{$spacing-unit} / 2));
 }
 }
 

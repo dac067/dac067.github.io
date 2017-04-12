@@ -3,35 +3,6 @@
 ---
 @charset "utf-8";
 
-img[alt=about-image]{
-  display: inline-block;
-  width: -webkit-calc(45%);
-  width:         calc(45%);
-  float: right;
-}
-
-.about-text{
-  display: inline-block;
-  width: -webkit-calc(45%);
-  width:         calc(45%);
-  float: left;
-}
-img[alt="none"]{
-  display: none;
-}
-
-img[alt=post-image]{
-  width: -webkit-calc(85%);
-  width:         calc(85%);
-
-}
-
-img[alt=post-image-vert]{
-  width: -webkit-calc(85%);
-  width:         calc(85%);
-
-
-}
 
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
