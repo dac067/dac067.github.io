@@ -18,6 +18,4 @@ Grand prIEEE 2017
 I'll write a detailed explanation sometime later.
 ..and fix embedding
 
-https://www.youtube.com/embed/7dBl0f6NcCU
-
 <iframe width="720" height="405" src="https://www.youtube.com/embed/7dBl0f6NcCU" frameborder="0" allowfullscreen></iframe>
