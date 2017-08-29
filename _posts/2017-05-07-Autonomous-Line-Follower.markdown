@@ -5,7 +5,7 @@ date: 2017-05-07
 categories: [front, electronics]
 thumbnail: linescan1.jpg
 ---
-<header>Hello</header>
+<heading>Hello</heading>
 
 ![post-image]({{site.url}}/assets/linescan1.jpg)
 
@@ -15,16 +15,16 @@ In my group, I worked with 3 other people. My contributions include: selecting h
 
 ![post-image]({{site.url}}/assets/linescan2.jpg)
 
-Our hardware system operated as follows:
-A 12 volt LiPo battery was connected to the half bridge motor driver circuit. The 12 volt driver powered and controlled the speed of the motor.
-The 12 volt battery was also connected to a UBEC (Universal Battery Elimination Circuit), which created and regulated a 6 volt output.
-This 6 volt output powered the Arduino and steering servo.
+Our hardware system operated as follows: <br>
+A 12 volt LiPo battery was connected to the half bridge motor driver circuit. The 12 volt driver powered and controlled the speed of the motor. <br>
+The 12 volt battery was also connected to a UBEC (Universal Battery Elimination Circuit), which created and regulated a 6 volt output. <br>
+This 6 volt output powered the Arduino and steering servo. <br>
 The Arduino's 5 volt pins were used to power the bluetooth module and linescan camera.
 
-Our software system operated as follows:
-The Arduino sent a PWM signal to the motor driver circuit such that the motor ran at a constant speed.
-The Arduino would continuously read data from the linescan camera so determine the location of the white line track.
-The steering servo was shifted accordingly to our proportional controller code so that the car stays on track.
+Our software system operated as follows: <br>
+The Arduino sent a PWM signal to the motor driver circuit such that the motor ran at a constant speed. <br>
+The Arduino would continuously read data from the linescan camera so determine the location of the white line track.<br>
+The steering servo was shifted accordingly to our proportional controller code so that the car stays on track.<br>
 The motor could be shut off remotely by issuing commands to the bluetooth module.
 
 ![post-image]({{site.url}}/assets/linescan3.jpg)
