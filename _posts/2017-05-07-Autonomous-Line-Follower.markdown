@@ -5,10 +5,27 @@ date: 2017-05-07
 categories: [front, electronics]
 thumbnail: linescan1.jpg
 ---
+<header>Hello</header>
 
 ![post-image]({{site.url}}/assets/linescan1.jpg)
 
+During the 2016-2017 school year, I worked on a project called Grand PrIEEE. It is a yearlong project where multiple teams create a small autonomous vehicle that would navigate through a preset track made of white tape. At the end of the year, the teams would compete against each other for the quickest completion time. This competition was hosted by UCSD's IEEE club.
+
+In my group, I worked with 3 other people. My contributions include: selecting hardware/vehicle components, completing the H bridge motor driver circuit, assembling the system, and working on the overall line detection code.
+
 ![post-image]({{site.url}}/assets/linescan2.jpg)
+
+Our hardware system operated as follows:
+A 12 volt LiPo battery was connected to the half bridge motor driver circuit. The 12 volt driver powered and controlled the speed of the motor.
+The 12 volt battery was also connected to a UBEC (Universal Battery Elimination Circuit), which created and regulated a 6 volt output.
+This 6 volt output powered the Arduino and steering servo.
+The Arduino's 5 volt pins were used to power the bluetooth module and linescan camera.
+
+Our software system operated as follows:
+The Arduino sent a PWM signal to the motor driver circuit such that the motor ran at a constant speed.
+The Arduino would continuously read data from the linescan camera so determine the location of the white line track.
+The steering servo was shifted accordingly to our proportional controller code so that the car stays on track.
+The motor could be shut off remotely by issuing commands to the bluetooth module.
 
 ![post-image]({{site.url}}/assets/linescan3.jpg)
 
