@@ -39,7 +39,7 @@ The motor could be shut off remotely via cellphone app by issuing commands to th
 
 ![post-image]({{site.url}}/assets/linescan4.jpg)
 
-<h3>Half Bridge - Component Selection</h3>
+<h4>Half Bridge - Component Selection</h4>
 
 For the motor, our project advisor suggested that our motor should have a minimum of 20 turns. Turns refers to the number of coil windings in brushed motors. Generally, more windings correspond to higher torque but less speed. We opted for the 27T brushed motor due to price, torque, and compatibility with our chassis.
 
@@ -48,10 +48,34 @@ The manufacturer's data sheet specified a voltage range between 2.4V and 30V. It
 Since the car only needs to go forward and not reverse, we opted for a half bridge driver instead of a full bridge. To design the circuit, I chose the switching MOSFETS based on the previous motor specifications. Component websites, such as DigiKey, had a huge selection of MOSFETs with varying specifications, so it was difficult to narrow down one. In the end, I opted for the FDP070AN06A0 because it had ratings that suited our application.
 
 The datasheet shows that this NMOS is rated for 80 Amps at 10 volts, meaning that it could provide enough current if the motor were to stall. It also has a maximum voltage rating of 60 volts, so our 11.1 volt LiPo battery would work fine. Additionally, this NMOS has a low 'Rds(on)' and low input capacitance when compared to other MOSFETs. Rds(on) corresponds to the resistance between drain and source when the MOSFET is switched on. A lower resistance value is optimal because it would result in less power dissipation and less heat.   
+
 Input capacitance refers to the capacitance between the gate and source. For the NMOS to be fully switched on, the voltage between gate and source needs to be above a certain threshold. But before this voltage is "applied", the gate capacitance has to be completely discharged. Thus, a lower gate capacitance is optimal because it results in faster switching between cut-off and saturation modes. This corresponds to less time wasted in triode mode (which has high heat dissipation).     
 
 ![post-image]({{site.url}}/assets/linescan3.jpg)
 
-<h3>Half Bridge - Circuit Design</h3>
+<h4>Half Bridge - Initial Circuit Design</h4>
+
+The sketch above depicts our early design for the half bridge circuitry. We would have a high side and low side MOSFET, each connected to a NPN BJT. The BJTs would serve as switches that would turn the MOSFETs on or off. The BJTs themselves would be biased by PWM pulses from the Arduino. The duty cycle of the PWM pulses would then dictate the speed of the motor. The pulses for the high side and low side drivers would be inverted out of phase such that only one side could be active high at any time. <br>
+
+When the high side is on and low side is off, current would flow through the motor and power the motor. <br>
+When the high side is off and low side is on, the motor would be grounded and turned off.
+Diodes would be place in parallel to the MOSFETs so that flyback currents from the motor startup wouldn't damage the circuitry.
+
+<h4>Half Bridge - Initial Drawbacks</h4>
+
+Our initial design had some drawbacks. For instance, the PWM pulses from the Arduino are not very accurate, so the high side and low side signals may not be completely out of phase. If both MOSFETs were to be switched on at the same time, then they would be shorted and burnt out in a smoky blaze. To combat this, we needed a "dead-time" in the pulses. The dead time refers to an interval in the PWM pulses where both signals would be off simultaneously. This dead time would occur before the signal switches from high/low and low/high so that
+they can't be high at the same time.
+
+Another drawback was that our initial design had a high side PMOS and low side NMOS. Compared to NMOS, a PMOS is disadvantageous because it has a higher resistance when switched on. Additionally, the PMOS has higher input capacitance and therefore takes a longer time to switch between states. Therefore, we sought to use NMOS for both the high side and low side drivers.
+
+However, this configuration was harder to implement. For a NMOS to be active, its gate-source voltage has to be above an intrinsic threshold. In this case, the source of the high side NMOS is connect to the load. The voltage drop across the NMOS is minimal, so the source voltage is approximately equal to the battery voltage Vdd. To switch this MOSFET on, the gate voltage would have to be greater than Vdd + Vth, or over 15 volts.
+
+A bootstrap capacitor was needed to reach this high gate voltage. This bootstrap capacitor would charge up when the motor is turned off, and dissipate at the gate to switch the high side NMOS on.
+
+<h4>Half Bridge - Final Design</h4>
+
+To implement the bootstrap capacitor and dead time, we utilized the IR2184 gate driver chip. From the datasheet, we saw that this chip had a relatively low switching time, had a high output voltage, and can output enough current to sink the NMOS gate capacitance. This chip would bias the high side and low side MOSFETs out of phase with each other and with added dead time. This would replace the BJTs in our initial circuit design and required only one PWM signal from the Arduino. Additionally, the IR2184 incorporated the circuitry to use bootstrap capacitors. To size this capacitor, we utilized an equation provided by the manufacturer. However, we found through experimentation that a 100 microfarad capacitor works well.  
+
+
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/7dBl0f6NcCU" frameborder="0" allowfullscreen></iframe>
