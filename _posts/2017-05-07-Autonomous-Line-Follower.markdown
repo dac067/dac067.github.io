@@ -8,13 +8,15 @@ thumbnail: linescan1.jpg
 
 ![post-image]({{site.url}}/assets/linescan1.jpg)
 
+<h4>Grand PrIEEE 2017</h4>
+
 During the 2016-2017 school year, I worked on a project called Grand PrIEEE. It is a yearlong project where multiple teams create a small autonomous vehicle that would navigate through a preset track made of white tape. At the end of the year, the teams would compete against each other for the quickest completion time. This competition was hosted by UCSD's IEEE club.
 
 In my group, I worked with 3 other people. My contributions include: selecting hardware/vehicle components, completing the H bridge motor driver circuit, assembling the system, and working on the overall line detection code.
 
-![post-image]({{site.url}}/assets/linescan2.jpg)
+![post-image]({{site.url}}/assets/linescan4.jpg)
 
-<h3>System Architecture</h3>
+<h4>System Architecture</h4>
 Here are our main components: <br>
 Arduino Uno <br>
 Schumacher Supastox GT 1/12 Scale Chassis <br>
@@ -37,7 +39,7 @@ The Arduino would continuously read data from the linescan camera so determine t
 The steering servo was shifted accordingly to our proportional controller code so that the car stays on track.<br>
 The motor could be shut off remotely via cellphone app by issuing commands to the bluetooth module.
 
-![post-image]({{site.url}}/assets/linescan4.jpg)
+![post-image]({{site.url}}/assets/linescan2.jpg)
 
 <h4>Half Bridge - Component Selection</h4>
 
@@ -51,7 +53,7 @@ The datasheet shows that this NMOS is rated for 80 Amps at 10 volts, meaning tha
 
 Input capacitance refers to the capacitance between the gate and source. For the NMOS to be fully switched on, the voltage between gate and source needs to be above a certain threshold. But before this voltage is "applied", the gate capacitance has to be completely discharged. Thus, a lower gate capacitance is optimal because it results in faster switching between cut-off and saturation modes. This corresponds to less time wasted in triode mode (which has high heat dissipation).     
 
-![post-image]({{site.url}}/assets/linescan3.jpg)
+![post-image]({{site.url}}/assets/gatedriverinitial.jpg)
 
 <h4>Half Bridge - Initial Circuit Design</h4>
 
@@ -61,7 +63,7 @@ When the high side is on and low side is off, current would flow through the mot
 When the high side is off and low side is on, the motor would be grounded and turned off.
 Diodes would be place in parallel to the MOSFETs so that flyback currents from the motor startup wouldn't damage the circuitry.
 
-<h4>Half Bridge - Initial Drawbacks</h4>
+<h4>Half Bridge - Initial Design Drawbacks</h4>
 
 Our initial design had some drawbacks. For instance, the PWM pulses from the Arduino are not very accurate, so the high side and low side signals may not be completely out of phase. If both MOSFETs were to be switched on at the same time, then they would be shorted and burnt out in a smoky blaze. To combat this, we needed a "dead-time" in the pulses. The dead time refers to an interval in the PWM pulses where both signals would be off simultaneously. This dead time would occur before the signal switches from high/low and low/high so that
 they can't be high at the same time.
@@ -71,6 +73,8 @@ Another drawback was that our initial design had a high side PMOS and low side N
 However, this configuration was harder to implement. For a NMOS to be active, its gate-source voltage has to be above an intrinsic threshold. In this case, the source of the high side NMOS is connect to the load. The voltage drop across the NMOS is minimal, so the source voltage is approximately equal to the battery voltage Vdd. To switch this MOSFET on, the gate voltage would have to be greater than Vdd + Vth, or over 15 volts.
 
 A bootstrap capacitor was needed to reach this high gate voltage. This bootstrap capacitor would charge up when the motor is turned off, and dissipate at the gate to switch the high side NMOS on.
+
+![post-image]({{site.url}}/assets/gatedriverfinal.jpg)
 
 <h4>Half Bridge - Final Design</h4>
 
