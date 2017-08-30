@@ -6,17 +6,20 @@ categories: [front, electronics]
 thumbnail: linescan1.jpg
 ---
 
+<h4>Grand PrIEEE 2017</h4>
+
 ![post-image]({{site.url}}/assets/linescan1.jpg)
 
-<h4>Grand PrIEEE 2017</h4>
 
 During the 2016-2017 school year, I worked on a project called Grand PrIEEE. It is a yearlong project where multiple teams create a small autonomous vehicle that would navigate through a preset track made of white tape. At the end of the year, the teams would compete against each other for the quickest completion time. This competition was hosted by UCSD's IEEE club.
 
 In my group, I worked with 3 other people. My contributions include: selecting hardware/vehicle components, completing the H bridge motor driver circuit, assembling the system, and working on the overall line detection code.
 
-![post-image]({{site.url}}/assets/linescan4.jpg)
 
 <h4>System Architecture</h4>
+
+![post-image]({{site.url}}/assets/linescan4.jpg)
+
 Here are our main components: <br>
 Arduino Uno <br>
 Schumacher Supastox GT 1/12 Scale Chassis <br>
@@ -39,9 +42,10 @@ The Arduino would continuously read data from the linescan camera so determine t
 The steering servo was shifted accordingly to our proportional controller code so that the car stays on track.<br>
 The motor could be shut off remotely via cellphone app by issuing commands to the bluetooth module.
 
-![post-image]({{site.url}}/assets/linescan2.jpg)
 
 <h4>Half Bridge - Component Selection</h4>
+
+![post-image]({{site.url}}/assets/linescan2.jpg)
 
 For the motor, our project advisor suggested that our motor should have a minimum of 20 turns. Turns refers to the number of coil windings in brushed motors. Generally, more windings correspond to higher torque but less speed. We opted for the 27T brushed motor due to price, torque, and compatibility with our chassis.
 
@@ -53,9 +57,10 @@ The datasheet shows that this NMOS is rated for 80 Amps at 10 volts, meaning tha
 
 Input capacitance refers to the capacitance between the gate and source. For the NMOS to be fully switched on, the voltage between gate and source needs to be above a certain threshold. But before this voltage is "applied", the gate capacitance has to be completely discharged. Thus, a lower gate capacitance is optimal because it results in faster switching between cut-off and saturation modes. This corresponds to less time wasted in triode mode (which has high heat dissipation).     
 
-![post-image]({{site.url}}/assets/gatedriverinitial.jpg)
 
 <h4>Half Bridge - Initial Circuit Design</h4>
+
+![post-image]({{site.url}}/assets/linescan2.jpg)
 
 The sketch above depicts our early design for the half bridge circuitry. We would have a high side and low side MOSFET, each connected to a NPN BJT. The BJTs would serve as switches that would turn the MOSFETs on or off. The BJTs themselves would be biased by PWM pulses from the Arduino. The duty cycle of the PWM pulses would then dictate the speed of the motor. The pulses for the high side and low side drivers would be inverted out of phase such that only one side could be active high at any time. <br>
 
@@ -74,9 +79,10 @@ However, this configuration was harder to implement. For a NMOS to be active, it
 
 A bootstrap capacitor was needed to reach this high gate voltage. This bootstrap capacitor would charge up when the motor is turned off, and dissipate at the gate to switch the high side NMOS on.
 
-![post-image]({{site.url}}/assets/gatedriverfinal.jpg)
 
 <h4>Half Bridge - Final Design</h4>
+
+![post-image]({{site.url}}/assets/gatedriverfinal.jpg)
 
 To implement the bootstrap capacitor and dead time, we utilized the IR2184 gate driver chip. From the datasheet, we saw that this chip had a relatively low switching time, had a high output voltage, and can output enough current to sink the NMOS gate capacitance. This chip would bias the high side and low side MOSFETs out of phase with each other and with added dead time. This would replace the BJTs in our initial circuit design and required only one PWM signal from the Arduino. Additionally, the IR2184 incorporated the circuitry to use bootstrap capacitors. To size this capacitor, we utilized an equation provided by the manufacturer. However, we found through experimentation that a 100 microfarad capacitor works well.  
 
