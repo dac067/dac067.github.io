@@ -89,7 +89,7 @@ To implement the bootstrap capacitor and dead time, we utilized the IR2184 gate 
 
 <h4>Line detection - Data Acquisition</h4>
 
-![post-image]({{site.url}}/assets/gatedriverfinal.jpg)
+![post-image]({{site.url}}/assets/data.jpg)
 
 For the competition, the official track would a line of white tape that is laid on the floor. Underneath the tape would be a wire carrying an alternating current. We had the option between using an optical sensor or an inductive sensor. The optical sensor would utilize the contrast between the tape and the floor. The inductive sensor would probably use wire coils and measure the induced current to detect the line. We opted for the optical sensor because it seemed easier to implement and test with.
 
@@ -104,6 +104,8 @@ This filter took 5 values (eg: registers 5 to 9) and take the median of the set.
 After median filtering, we differentiated each value with respect to its adjacent neighbor. For example, the value in array index 0 was subtracted from the value in array index 1. This difference was then appended into a new array. The next entry into this new array would be the difference between values in indexes 1 and 2. This process of subtracting adjacent numbers repeated for the remaining numbers.
 
 From this differential array, we looked for the largest positive and negative value (maximum and minimum). The largest positive value indicated a transition from dark carpet into white tape. The largest negative value indicated a transition from white tape into dark carpet. The difference between the indexes of these two values would correspond to the middle of the white line. This "middle index" was then utilized for our proportional controller.
+
+![post-image]({{site.url}}/assets/linescan3.jpg)
 
 <h4>Proportional Controller and Servo Control</h4>
 
