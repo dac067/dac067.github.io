@@ -14,7 +14,7 @@ thumbnail: linescan1.jpg
 During the 2016-2017 school year, I worked on a project called Grand PrIEEE. It is a yearlong project where multiple teams create a small autonomous vehicle that would navigate through a preset track made of white tape. At the end of the year, the teams would compete against each other for the quickest completion time. This competition was hosted by UCSD's IEEE club.
 
 In my group, I worked with 3 other people. My contributions include: selecting hardware/vehicle components, completing the H bridge motor driver circuit, assembling the system, and working on the overall line detection code.
-
+<br>
 
 <h4>System Architecture</h4>
 
@@ -41,7 +41,7 @@ The Arduino sent a PWM signal to the motor driver circuit such that the motor ra
 The Arduino would continuously read data from the linescan camera so determine the location of the white line track.<br>
 The steering servo was shifted accordingly to our proportional controller code so that the car stays on track.<br>
 The motor could be shut off remotely via cellphone app by issuing commands to the bluetooth module.
-
+<br>
 
 <h4>Half Bridge - Component Selection</h4>
 
@@ -56,11 +56,11 @@ Since the car only needs to go forward and not reverse, we opted for a half brid
 The datasheet shows that this NMOS is rated for 80 Amps at 10 volts, meaning that it could provide enough current if the motor were to stall. It also has a maximum voltage rating of 60 volts, so our 11.1 volt LiPo battery would work fine. Additionally, this NMOS has a low 'Rds(on)' and low input capacitance when compared to other MOSFETs. Rds(on) corresponds to the resistance between drain and source when the MOSFET is switched on. A lower resistance value is optimal because it would result in less power dissipation and less heat.   
 
 Input capacitance refers to the capacitance between the gate and source. For the NMOS to be fully switched on, the voltage between gate and source needs to be above a certain threshold. But before this voltage is "applied", the gate capacitance has to be completely discharged. Thus, a lower gate capacitance is optimal because it results in faster switching between cut-off and saturation modes. This corresponds to less time wasted in triode mode (which has high heat dissipation).     
-
+<br>
 
 <h4>Half Bridge - Initial Circuit Design</h4>
 
-![post-image]({{site.url}}/assets/linescan2.jpg)
+![post-image]({{site.url}}/assets/gatedriverinitial.jpeg)
 
 The sketch above depicts our early design for the half bridge circuitry. We would have a high side and low side MOSFET, each connected to a NPN BJT. The BJTs would serve as switches that would turn the MOSFETs on or off. The BJTs themselves would be biased by PWM pulses from the Arduino. The duty cycle of the PWM pulses would then dictate the speed of the motor. The pulses for the high side and low side drivers would be inverted out of phase such that only one side could be active high at any time. <br>
 
@@ -78,14 +78,56 @@ Another drawback was that our initial design had a high side PMOS and low side N
 However, this configuration was harder to implement. For a NMOS to be active, its gate-source voltage has to be above an intrinsic threshold. In this case, the source of the high side NMOS is connect to the load. The voltage drop across the NMOS is minimal, so the source voltage is approximately equal to the battery voltage Vdd. To switch this MOSFET on, the gate voltage would have to be greater than Vdd + Vth, or over 15 volts.
 
 A bootstrap capacitor was needed to reach this high gate voltage. This bootstrap capacitor would charge up when the motor is turned off, and dissipate at the gate to switch the high side NMOS on.
-
+<br>
 
 <h4>Half Bridge - Final Design</h4>
 
 ![post-image]({{site.url}}/assets/gatedriverfinal.jpg)
 
-To implement the bootstrap capacitor and dead time, we utilized the IR2184 gate driver chip. From the datasheet, we saw that this chip had a relatively low switching time, had a high output voltage, and can output enough current to sink the NMOS gate capacitance. This chip would bias the high side and low side MOSFETs out of phase with each other and with added dead time. This would replace the BJTs in our initial circuit design and required only one PWM signal from the Arduino. Additionally, the IR2184 incorporated the circuitry to use bootstrap capacitors. To size this capacitor, we utilized an equation provided by the manufacturer. However, we found through experimentation that a 100 microfarad capacitor works well.  
+To implement the bootstrap capacitor and dead time, we utilized the IR2184 gate driver chip. From the datasheet, we saw that this chip had a relatively low switching time, had a high output voltage, and can output enough current to sink the NMOS gate capacitance. This chip would bias the high side and low side MOSFETs out of phase with each other and with added dead time. This would replace the BJTs in our initial circuit design and required only one PWM signal from the Arduino. Additionally, the IR2184 incorporated the circuitry to use bootstrap capacitors. To size this capacitor, we utilized an equation provided by the manufacturer. However, we found through experimentation that a 470 microfarad capacitor works well.  
 
+
+<h4>Line detection - Data Acquisition</h4>
+
+![post-image]({{site.url}}/assets/gatedriverfinal.jpg)
+
+For the competition, the official track would a line of white tape that is laid on the floor. Underneath the tape would be a wire carrying an alternating current. We had the option between using an optical sensor or an inductive sensor. The optical sensor would utilize the contrast between the tape and the floor. The inductive sensor would probably use wire coils and measure the induced current to detect the line. We opted for the optical sensor because it seemed easier to implement and test with.
+
+We used the Parallax TSL1401 Linescan camera. It is a one dimensional camera and has a resolution of 1 x 128 "pixels", meaning that it only sees a horizontal line. Each "pixel" operates as a register for detected brightness intensity values. The register values range from 0 to 1023, where 0 corresponds to completely dark and 1023 corresponds to completely white. For each scan, the camera would take a snapshot of the floor and fill its registers with the corresponding brightness values. It would then clock out these 128 register values for the Arduino to analyze and then start another scan. The sensitivity of the camera's sensor could be adjusted via clock timing so we could compensate for changes in external lighting.
+
+<h4>Line detection - Data Analysis</h4>
+
+From the camera data, we could infer that the high intensity values correspond to the white line, whereas the low values correspond to the dark carpet. However, the raw data from the 128 registers would show outliers or incorrect numbers. The camera sometimes reported high values even though the sensor lens was blocked for testing. To fix these error, we implemented a median filter with window size 5.
+
+This filter took 5 values (eg: registers 5 to 9) and take the median of the set. This median would be appended to a new array. The "window" would be incremented by 1 (eg: registers 6 to 10) and the median would be taken from that set. This process repeated until all 128 registers were read and filtered. The final array was used for further analysis.
+
+After median filtering, we differentiated each value with respect to its adjacent neighbor. For example, the value in array index 0 was subtracted from the value in array index 1. This difference was then appended into a new array. The next entry into this new array would be the difference between values in indexes 1 and 2. This process of subtracting adjacent numbers repeated for the remaining numbers.
+
+From this differential array, we looked for the largest positive and negative value (maximum and minimum). The largest positive value indicated a transition from dark carpet into white tape. The largest negative value indicated a transition from white tape into dark carpet. The difference between the indexes of these two values would correspond to the middle of the white line. This "middle index" was then utilized for our proportional controller.
+
+<h4>Proportional Controller and Servo Control</h4>
+
+Our servo was used to steer the vehicle. When we seated our servo into the car chassis, we deduced the servo PWM values that correspond to the maximum steering range. A PWM value of 50 steered the front wheels to the far left direction. A PWM value of 115 steered to the far right. The median 55 shifted the wheels to move forward.
+
+Experimentally, we found that the white line had a width of 40 pixels. The servo would lock to the far right or far left position when the middle index was close to the array edges. When the middle index was less than 20, the servo would lock to the far left. When the middle index was greater than 108, the servo would lock to the far right. This established our maximum boundaries for movement and computation.
+
+For the car to follow the line, the middle index of the white line should ideally match with the middle index of the camera array. To accomplish this, we used a proportional gain controller that was modeled by the following equation.  
+
+Output = [(Kp * Error) + P_steadystate] * Tuning_value
+
+Error: Difference between center index of the white line and the middle of the camera array
+Output: The PWM turning value for the servo was would reduce the error
+P_steadystate: The output of the controller if where was no error. This corresponds to the value of 87, which maps the servo forward and makes the car move straight.
+Kp: Proportional gain. The first component is the difference between the PWM values of the servo for far left and far right positions.The second component of proportional gain is the difference between the locking boundaries for the camera array. Proportional gain is the ratio between these
+Tuning value: This initially had a value of 1 and was tweaked incrementally to fine tune car performance.
+
+This proportional controller scheme aims to reduce the error to zero so that the camera tracks the center of the white line. The linescan camera was positioned so that it looks a couple inches ahead of the car. In one frame, the system would detect a curve, calculate the necessary PWM value to reduce error, and then map the servo accordingly. In the next frame, the linescan array would refresh and the process would repeat again.
+
+Our system could be summed up as followed:
+1. Linescan camera takes snapshot of line as a 128 pixel array.
+2. Arduino performs median filtering to eliminate outliers.
+3. Arduino detects the line and calculates its center index.
+4. Proportional controller calculates PWM value and turns the servo.
 
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/7dBl0f6NcCU" frameborder="0" allowfullscreen></iframe>
