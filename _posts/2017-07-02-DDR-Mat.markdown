@@ -2,7 +2,7 @@
 layout: post
 title:  "DDR Mat"
 date: 2017-07-02
-categories: [front, woodworking, electronics]
+categories: [front, electronics, woodworking]
 thumbnail: ddr1.jpg
 ---
 ![post-image]({{site.url}}/assets/ddr1.jpg)
