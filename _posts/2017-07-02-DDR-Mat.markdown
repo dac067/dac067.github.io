@@ -2,7 +2,7 @@
 layout: post
 title:  "DDR Mat"
 date: 2017-07-02
-categories: [front, electronics, woodworking]
+categories: [front, woodworking, electronics]
 thumbnail: ddr1.jpg
 ---
 ![post-image]({{site.url}}/assets/ddr1.jpg)
@@ -11,8 +11,7 @@ This is a controller mat for the video game "Dance Dance Revolution".
 
 ![post-image]({{site.url}}/assets/ddr2.jpg)
 
-The player must step on the up/down/left/right directional pad in sync with the arrows on the screen. Many consumer foam pads degrade quickly
-with use, so I opted to construct my own.
+To play this game, the user must step on the up/down/left/right directional pad in sync with the arrows on the screen. Many consumer foam pads (pictured above) degrade quickly with use, so I opted to construct my own.
 
 ![post-image]({{site.url}}/assets/ddr3.jpg)
 
@@ -29,7 +28,7 @@ in place.
 
 The wires were then routed through grooves in the plywood and then soldered onto aluminum plates. For each button, there is a ground plate
 and a direction plate. The grounds for each button are all joined together. For a step to be registered, the ground plate and the direction
-plate must have electrical contact and complete the circuit.
+plate must have electrical contact to complete the circuit.
 
 ![post-image]({{site.url}}/assets/ddr5.jpg)
 
@@ -40,3 +39,6 @@ pushes the plates apart and opens the circuit again.
 
 To adjust the sensitivity of the system, I loosely screwed the wooden square onto the base. By turning the screws, I can bring the metal
 plates closer together or father apart, thus adjusting the foot pressure needed for a step.  
+
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/z4f1yrfQ1dM" frameborder="0" allowfullscreen></iframe>
