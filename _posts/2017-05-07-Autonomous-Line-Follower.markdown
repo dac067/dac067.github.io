@@ -107,7 +107,7 @@ From this differential array, we looked for the largest positive and negative va
 
 <h4>Proportional Controller and Servo Control</h4>
 
-![post-image]({{site.url}}/assets/data.jpg)
+![post-image]({{site.url}}/assets/linescan3.jpg)
 
 Our servo was used to steer the vehicle. When we seated our servo into the car chassis, we deduced the servo PWM values that correspond to the maximum steering range. A PWM value of 50 steered the front wheels to the far left direction. A PWM value of 115 steered to the far right. The median 55 shifted the wheels to move forward.
 
@@ -129,12 +129,12 @@ Our system could be summed up as followed:
 1. Linescan camera takes snapshot of line as a 128 pixel array.
 2. Arduino performs median filtering to eliminate outliers.
 3. Arduino detects the line and calculates its center index.
-4. Proportional controller calculates PWM value and turns the servo.
+4. Proportional controller calculates PM value and turns the servo.
 
 <h4>Conclusion</h4>
 
 In the end, we managed to navigate most of the track. On the final curve at 10 feet from the finish line, our car swerved out of the track. Despite this, I think we did pretty well. Our current system only uses a proportional gain controller, meaning that the speed of the car is not factored into the equation. This is detrimental because the car speed is not constant despite running a constant PWM signal to the gate driver. The motor RPM is dependent on the voltage of the battery.
 
-If we were to continue this project, we would add a rotary encoder in a feedback loop so that we can manage the speed of the car. Additoinally, we would implement a Pure Pursuit controller schema, which adjusts the speed according to line curvature.
+If we were to continue this project, we would add a rotary encoder in a feedback loop so that we can manage the speed of the car. Additionally, we would implement a Pure Pursuit controller schema, which adjusts the speed according to line curvature.
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/7dBl0f6NcCU" frameborder="0" allowfullscreen></iframe>

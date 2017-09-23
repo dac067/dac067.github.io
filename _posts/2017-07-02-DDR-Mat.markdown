@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "DDR Mat"
+date: 2017-07-02
+categories: [front, electronics, woodworking]
+thumbnail: ddr1.jpg
+---
+![post-image]({{site.url}}/assets/ddr1.jpg)
+
+This is a controller mat for the video game "Dance Dance Revolution".
+
+![post-image]({{site.url}}/assets/ddr2.jpg)
+
+The player must step on the up/down/left/right directional pad in sync with the arrows on the screen. Many consumer foam pads degrade quickly
+with use, so I opted to construct my own.
+
+![post-image]({{site.url}}/assets/ddr3.jpg)
+
+It is made from a Playstation One controller, aluminum roofing tiles, and plywood. I took apart the Playstation controller and soldered wires to
+the copper pads corresponding to the Up, Down Left, Right, and Ground terminals.
+
+The PCB diagram can be found here:
+http://www.slagcoin.com/joystick/pcb_wiring.html
+
+The copper pads on the controller are very fragile and can break off easily. I placed alligator clips on the wires and hot glued everything
+in place.
+
+![post-image]({{site.url}}/assets/ddr4.jpg)
+
+The wires were then routed through grooves in the plywood and then soldered onto aluminum plates. For each button, there is a ground plate
+and a direction plate. The grounds for each button are all joined together. For a step to be registered, the ground plate and the direction
+plate must have electrical contact and complete the circuit.
+
+![post-image]({{site.url}}/assets/ddr5.jpg)
+
+To facilitate electrical contact, I made a wooden square that floats on top of the aluminum plates. I taped an aluminum plate on the
+underside of the square. On the edges and corners, there are grooves with high density insulation foam. When the square floats over the
+plates, there is no contact. When I apply pressure to the wooden square, the plates touch each other and registers the step. The foam then
+pushes the plates apart and opens the circuit again.
+
+To adjust the sensitivity of the system, I loosely screwed the wooden square onto the base. By turning the screws, I can bring the metal
+plates closer together or father apart, thus adjusting the foot pressure needed for a step.  
