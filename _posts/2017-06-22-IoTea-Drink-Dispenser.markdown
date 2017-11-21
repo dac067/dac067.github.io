@@ -27,8 +27,10 @@ operates by squeezing the rubber tubing in a circular rotation, creating suction
 
 ![post-image]({{site.rul}}/assets/pump3.jpg)
 
-For our final presentation, we did a Customer Journey map, competition analysis, personas, etc.
+For our final presentation, we did a Customer Journey map, competition analysis, personas, and other research. It was a very nice class overall since it tied together software, business, and electrical engineering aspects into one project. 
 Here is a link to our powerpoint.
 https://docs.google.com/presentation/d/154Sc6w_vb3orhJCIFGjVx0dz_aLIm3kgE25RuFR66yA/edit?usp=sharing
+
+<iframe width="720" height="450" src="https://www.youtube.com/embed/d8uoOLrl5Hc?start=16" frameborder="0" allowfullscreen></iframe>
 
 <iframe width="720" height="450" src="https://www.youtube.com/embed/_mpTIehHUXA" frameborder="0" allowfullscreen></iframe>
