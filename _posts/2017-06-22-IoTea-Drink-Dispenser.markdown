@@ -12,11 +12,11 @@ thumbnail: pump2.jpg
 
 In Winter and Spring quarter 2017, I enrolled in a new pilot class called "The Art of Product Engineering". It was a 2-quarter class that aimed to introduce Electrical Engineering students to the software and business side of product development. The goal of this course was to strategically develop a product with the customer experience in mind, instead of rushing a product that is ultimately unwanted and unwarranted.   
 
-For the first quarter, we focused on learning Python in a series of 12 assignments. We also had labs in which we utilized the Raspberry Pi to read data from sensors and implement basic programs. For the first quarter final project, we learned HTML/CSS to build and deploy a simple website that queries an online/MySQL database for RPi sensor data.
+For the first quarter, we focused on learning Python in a series of 12 assignments. We also had labs in which we utilized the Raspberry Pi to read data from sensors and implement basic programs. For the first quarter final project, we learned HTML/CSS to build and deploy a simple website that queries an online/MySQL database for RPi sensor data. Additionally, we were introduced to Git, Full Stack software developement, web-servers, and other Computer Science concepts.  
 
 ![post-image]({{site.url}}/assets/pump1.jpg)
 
-In the second term, we were introduced to business practices such as market research, customer journey map, revenue models, job stories, etc. We were to use these business practices to develop an Internet-of-Things product in a mock startup environment. My team and I came up with the "IoTea". It is essentially a bartending robot that dispenses mixed drinks via a mobile/web application. The application would have a database of drinks with the corresponding recipe to make it. To make a drink, the user would fill the IoTea pod containers with the necessary ingredients, select the drink from the application, and press the dispense button. The IoTea prototype would then turn on a Peristaltic pump that would siphon the necessary ingredient amount from the pods into the user's cup.    
+In the second term, we were introduced to business practices such as market research, customer journey map, revenue models, job stories, product developement lifecycle, and more. We were to use these business practices to develop an Internet-of-Things product in a mock startup environment. My team and I came up with the "IoTea". It is essentially a bartending robot that dispenses mixed drinks via a mobile/web application. The application would have a database of drinks with the corresponding recipe to make it. To make a drink, the user would fill the IoTea pod containers with the necessary ingredients, select the drink from the application, and press the dispense button. The IoTea prototype would then turn on a Peristaltic pump that would siphon the necessary ingredient amount from the pods into the user's cup.    
 
 ![post-image]({{site.url}}/assets/pump4.jpg)
 
@@ -28,6 +28,7 @@ operates by squeezing the rubber tubing in a circular rotation, creating suction
 ![post-image]({{site.rul}}/assets/pump3.jpg)
 
 For our final presentation, we did a Customer Journey map, competition analysis, personas, and other research. It was a very nice class overall since it tied together software, business, and electrical engineering aspects into one project. 
+
 Here is a link to our powerpoint.
 https://docs.google.com/presentation/d/154Sc6w_vb3orhJCIFGjVx0dz_aLIm3kgE25RuFR66yA/edit?usp=sharing
 
