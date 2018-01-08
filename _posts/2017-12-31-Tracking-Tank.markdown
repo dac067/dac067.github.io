@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "OpenCV Object Following Robot"
+title: "Object Tracking Robot"
 date: 2017-12-31
-categories: front, electronics, printing
+categories: [front, electronics, printing]
 thumbnail: pytank1.jpg
 ---
+
+
 ![post-image]({{site.url}}/assets/pytank1.jpg)
 
 ![post-image]({{site.url}}/assets/pytank2.jpg)
@@ -15,7 +17,7 @@ thumbnail: pytank1.jpg
 
 ![post-image]({{site.url}}/assets/pytank5.jpg)
 
-<iframe width="720" height="405" src="https://youtu.be/Fyp27L07shM" frameborder="0" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/Fyp27L07shM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 <br>
-<iframe width="720" height="405" src="https://youtu.be/M8-tdnEpVJU" frameborder="0" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/M8-tdnEpVJU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>

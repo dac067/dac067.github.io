@@ -2,7 +2,7 @@
 layout: post
 title:  "IoTea Drink Dispenser"
 date: 2017-06-22
-categories: [front, electronics]
+categories: [front, electronics, printing]
 thumbnail: pump2.jpg
 ---
 
@@ -27,7 +27,7 @@ operates by squeezing the rubber tubing in a circular rotation, creating suction
 
 ![post-image]({{site.rul}}/assets/pump3.jpg)
 
-For our final presentation, we did a Customer Journey map, competition analysis, personas, and other research. It was a very nice class overall since it tied together software, business, and electrical engineering aspects into one project. 
+For our final presentation, we did a Customer Journey map, competition analysis, personas, and other research. It was a very nice class overall since it tied together software, business, and electrical engineering aspects into one project.
 
 Here is a link to our powerpoint.
 https://docs.google.com/presentation/d/154Sc6w_vb3orhJCIFGjVx0dz_aLIm3kgE25RuFR66yA/edit?usp=sharing
