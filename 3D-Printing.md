@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Electronics
+title: 3D-Printing
 permalink: /printing/
 order: 3
 ---
