@@ -18,3 +18,5 @@ github_username:  dac067
 markdown: kramdown
 paginate: 6
 paginate_path: "/page:num"
+
+gems: [jekyll-paginate]

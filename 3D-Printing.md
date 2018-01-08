@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Etc
-permalink: /etc/
-order: 5
+title: Electronics
+permalink: /printing/
+order: 3
 ---
 
 <div class="portfolio">
 
-  <h1 class="page-heading">Etc</h1>
+  <h1 class="page-heading">3D-Printing</h1>
 
   <div class="post-gallery">
     {% assign loopindex = 0 %}
-    {% for post in site.categories.etc %}
+    {% for post in site.categories.printing %}
     {% assign loopindex = loopindex | plus: 1 %}
     {% assign rowfinder = loopindex | modulo: 3 %}
     {% if rowfinder == 1 %}

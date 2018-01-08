@@ -2,7 +2,7 @@
 layout: default
 title: Woodworking
 permalink: /woodworking/
-order: 3
+order: 4
 ---
 
 <div class="portfolio">
