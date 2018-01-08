@@ -119,16 +119,23 @@ Output = [(Kp * Error) + P_steadystate] * Tuning_value
 
 Error: Difference between center index of the white line and the middle of the camera array
 Output: The PWM turning value for the servo was would reduce the error
+
 P_steadystate: The output of the controller if where was no error. This corresponds to the value of 87, which maps the servo forward and makes the car move straight.
+
 Kp: Proportional gain. The first component is the difference between the PWM values of the servo for far left and far right positions.The second component of proportional gain is the difference between the locking boundaries for the camera array. Proportional gain is the ratio between these
+
 Tuning value: This initially had a value of 1 and was tweaked incrementally to fine tune car performance.
 
 This proportional controller scheme aims to reduce the error to zero so that the camera tracks the center of the white line. The linescan camera was positioned so that it looks a couple inches ahead of the car. In one frame, the system would detect a curve, calculate the necessary PWM value to reduce error, and then map the servo accordingly. In the next frame, the linescan array would refresh and the process would repeat again.
 
 Our system could be summed up as followed:
+
 1. Linescan camera takes snapshot of line as a 128 pixel array.
+
 2. Arduino performs median filtering to eliminate outliers.
+
 3. Arduino detects the line and calculates its center index.
+
 4. Proportional controller calculates PM value and turns the servo.
 
 <h4>Conclusion</h4>
