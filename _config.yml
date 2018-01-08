@@ -17,4 +17,4 @@ github_username:  dac067
 # Build settings
 markdown: kramdown
 paginate: 6
-paginate_path: "/"
+paginate_path: "/page:num"

@@ -6,7 +6,7 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
-    {% for post in paginator.posts %}
+    {% for post in site.categories.front %}
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
