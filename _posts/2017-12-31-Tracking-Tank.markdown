@@ -22,7 +22,14 @@ This method relies on consistent exterior lighting.
 
 ![post-image]({{site.url}}/assets/pytank3.jpg)
 
+The system is powered by two 18650 batteries in series for 7.4v. This is fed into the motor driver to run the small DC motors. The motor driver also regulates a 5v output, which powers the Raspberry Pi.
+
 ![post-image]({{site.url}}/assets/pytank4.jpg)
+
+The robot is also capable of streaming video to a local webserver. This is facilitated with the RPi-Cam-Web_Interface software that can be found here:
+https://elinux.org/RPi-Cam-Web-Interface
+The robot can be driven remotely from SSH by reading user input with the python curses module. https://elinux.org/RPi-Cam-Web-Interface
+This bypasses the need for X-forwarding, which has compatibility issues with different computers.
 
 ![post-image]({{site.url}}/assets/pytank5.jpg)
 
