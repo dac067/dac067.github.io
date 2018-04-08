@@ -16,12 +16,19 @@ with 3d printed and laser cut parts.
 
 The pinball machine is controlled by an Arduino Mega and powered by a 19v laptop charger.
 The machine has multiple components and scoring mechanisms:
+
 -Pop bumpers
+
 -Flippers
+
 -7 segment displays
+
 -IR emitter and receivers
+
 -Ball return servo
+
 -Speaker
+
 
 The pinball machine is constructed from quarter-inch laser-cut plywood wood and 3d printed components. The sides of the machine are fastened together with box joints and bolts. The playfield is angled at a 7 degree incline and rests on wooden brackets, which are bolted into the side walls.
 
@@ -29,7 +36,7 @@ The pinball machine is constructed from quarter-inch laser-cut plywood wood and 
 
 The flippers are actuated by large solenoids, which are mounted to the underside of the playfield with 3d-printed brackets. When the solenoid is activated, it pulls a tab and rotates the flipper. The flipper solenoid is controlled by buttons that are mounted on the side of the machine. The buttons are connected to 5v and the gate of a mosfet. When the button is pressed, the mosfet becomes active and powers the solenoid. The solenoid circuit is see below.
 
-![post-image]({{site.url}}/assets/flipper.jpg)
+![post-image]({{site.url}}/assets/flipper.png)
 
 Here, the 15 ohm resistor is comprised of six 5-watt 10 ohm resistors in parallel and series configuration. The resistors were chosen so that it does not exceed the power rating when the solenoid is held active for long periods of time. A diode was placed in parallel with the solenoid to allow current to flow when the solenoid is turned off.
 
