@@ -18,17 +18,11 @@ The pinball machine is controlled by an Arduino Mega and powered by a 19v laptop
 The machine has multiple components and scoring mechanisms:
 
 -Pop bumpers
-
 -Flippers
-
 -7 segment displays
-
 -IR emitter and receivers
-
 -Ball return servo
-
 -Speaker
-
 
 The pinball machine is constructed from quarter-inch laser-cut plywood wood and 3d printed components. The sides of the machine are fastened together with box joints and bolts. The playfield is angled at a 7 degree incline and rests on wooden brackets, which are bolted into the side walls.
 
@@ -48,7 +42,7 @@ When the mosfet is initially switched on, there is initially 0 volts on the capa
 
 The bumpers also follow the same principle. The pillar of the bumper is encompassed by a copper-tape ring that is connected to the Arduino. The top of the cone-shaped plunger has a copper-tape curtain that hangs around the cone and is connected to 5v. When the ball rolls into the bumper, the ball completes the contact between the 5v copper tape curtain and the ring, sending 5v to the Arduino pin. The Arduino reads this switch connection and momentarily biases the mosfet gate of the solenoid driver circuit. This pulls the bumper cone down and pushes the ball away.
 
-![post-image]({{site.url}}/assets/pinball6.jpg)
+![post-image]({{site.url}}/assets/pinball4.jpg)
 
 The spiral is comprised of two main parts - the ramp and the return mechanism. The ramp is a 3d-printed spiral that the player must propel the ball into. At the end of the spiral, the ball drops into a hole underneath the playfield and triggers an IR sensor. The ball rolls down a tunnel and into the lift mechanism. The lift mechanism is a wooden bar connected to a servo. The servo spins from 0 to ~180 degrees to lift the ball upwards and return it to the playfield.
 
@@ -57,6 +51,8 @@ The spiral is comprised of two main parts - the ramp and the return mechanism. T
 Two pairs of IR transmitter/receivers are placed on the pinball machine - at the tunnel of spiral ramp and at the ball return losing channel. The IR transmitter and receiver are housed in 3d-printed enclosures that are bolted into the playfield. The transmitter and receiver are placed such that they face each other. When the ball rolls past, it breaks the signal, which is then registered as a digital low by the Arduino. These two components are powered by 5v and have current limiting resistors. The signals are used to count the number of rounds lost and to activate the ramp servo.
 
 ![post-image-small]({{site.url}}/assets/optical.png)
+
+The score and ball counter is depicted using six 7-segment displays. Four digits are used for the score, while two are used for the remaining ball counter. The 7-segment displays are powered by 5v and controlled via the Arduino. PNP BJT are used to facilitate a persistence of vision effect in which only one display is active at any given time, but the displays are cycled quickly so that they all appear active. The electrical schematic for two of the digits is seen in Fig 13. The displays are placed in a 3d-printed bracket and screwed onto the backboard.
 
 The pinball machine is powered by a 19v laptop charger. The charger was connected to a barrel jack, which wired 19v to the solenoids. The 19v was also fed through a series of voltage regulators - 12v, 9v, and 5v. The 19v and 15v regulators were not used because they somehow limited the output voltage of the 5v regulator when it was fully loaded. This might have been due to the internal resistance of the components. The 5v is fed to the switches, 7 segment, IR, and Arduino. The servo was powered directly off the Arduino because it created interference when it was connected to the 5v rail.
 
