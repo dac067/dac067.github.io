@@ -18,10 +18,15 @@ The pinball machine is controlled by an Arduino Mega and powered by a 19v laptop
 The machine has multiple components and scoring mechanisms:
 
 -Pop bumpers
+
 -Flippers
+
 -7 segment displays
+
 -IR emitter and receivers
+
 -Ball return servo
+
 -Speaker
 
 The pinball machine is constructed from quarter-inch laser-cut plywood wood and 3d printed components. The sides of the machine are fastened together with box joints and bolts. The playfield is angled at a 7 degree incline and rests on wooden brackets, which are bolted into the side walls.
