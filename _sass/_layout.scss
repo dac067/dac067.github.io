@@ -22,6 +22,11 @@
  img[alt=post-image]{
    width: -webkit-calc(85%);
    width:         calc(85%);
+ }
+
+ img[alt=post-image-small]{
+   width: -webkit-calc(30%);
+   width:         calc(30%);
 
  }
 
