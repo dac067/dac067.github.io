@@ -10,7 +10,7 @@ thumbnail: pinball1.jpg
 
 This is a pinball machine that my partner and I built for the class ECE115: Fast Prototyping.
 The objective of this class is to construct a full electromechanical system from scratch
-with 3d printed and laser cut parts. 
+with 3d printed and laser cut parts.
 
 ![post-image]({{site.url}}/assets/pinball2.jpg)
 
@@ -22,6 +22,8 @@ with 3d printed and laser cut parts.
 ![post-image]({{site.url}}/assets/pinball5.jpg)
 
 ![post-image]({{site.url}}/assets/pinball6.jpg)
+
+![post-image]({{site.url}}/assets/pinball7.jpg)
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/xlxsT34q97c"
 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
