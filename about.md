@@ -15,7 +15,7 @@ Hello. My name is David Chen. This is my blog/portfolio of sorts. <br><br>
 
 Here is an incomplete collection of projects I've completed since 2011. <br><br>
 
-I am currently a 5th year Electrical Engineering major at UC San Diego. My goal is to combine electronics, 3d printing, and woodworking to make neat projects.
+I recently graduated from UC San Diego with a major Electrical Engineering and a concentration in power electronics. My goal is to combine electronics, 3d printing, and woodworking to make neat projects.
 
 <br>
 <br>
