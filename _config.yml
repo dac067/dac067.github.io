@@ -7,7 +7,7 @@
 
 # Site settings
 title: Fluxwood
-email: davis@fluxwood.org
+email: david.chen@jacobs.ucsd.edu
 description: > # this means to ignore newlines until "baseurl:"
   Electrical Engineering & Design
 baseurl: "" # the subpath of your site, e.g. /blog
