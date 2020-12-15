@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Fluxwood
-email: david.chen@jacobs.ucsd.edu
+title: Fluxwood Manufactory
+email: davis@fluxwood.org
 description: > # this means to ignore newlines until "baseurl:"
-  Electrical Engineering & Design
+  Electrical Engineering and Fine Crafts
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://fluxwood.org" # the base hostname & protocol for your site
 github_username:  dac067
