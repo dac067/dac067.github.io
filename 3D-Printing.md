@@ -10,8 +10,8 @@ order: 3
   <h1 class="page-heading">3D-Printing</h1>
 
   <div class="post-gallery">
-    {% assign loopindex = 0 %}al
-    
+    {% assign loopindex = 0 %}
+
     {% for post in site.categories.printing %}
     {% assign loopindex = loopindex | plus: 1 %}
     {% assign rowfinder = loopindex | modulo: 3 %}
