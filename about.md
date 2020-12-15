@@ -15,9 +15,9 @@ Hi my name is Davis. This is my portfolio of sorts. <br><br>
 
 Here is an incomplete collection of projects I've completed since 2011. <br><br>
 
-I work as an Electrical Engineer, but pursue many different hobbies on the side.
+I work as an Electrical Engineer, but pursue many different hobbies on the side. <br><br>
 
-I run an Etsy store call the Fluxwood Manufactory, where I sell fine dwarven crafts and art.
+I run an Etsy store call the Fluxwood Manufactory, where I sell fine dwarven crafts and art. 
 
 
 
