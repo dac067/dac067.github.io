@@ -8,7 +8,7 @@ order: 1
   <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
   </header>
 
-![about-image]({{site.url}}/assets/bird.jpg)
+![about-image]({{site.url}}/assets/fishLogo.png)
 
 <div class="about-text">
 Hi my name is Davis. This is my portfolio of sorts. <br><br>

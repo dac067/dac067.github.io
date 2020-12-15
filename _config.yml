@@ -9,7 +9,7 @@
 title: Fluxwood Manufactory
 email: davis@fluxwood.org
 description: > # this means to ignore newlines until "baseurl:"
-  Electrical Engineering and Fine Crafts
+  Electrical Engineering and Design
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://fluxwood.org" # the base hostname & protocol for your site
 github_username:  dac067
