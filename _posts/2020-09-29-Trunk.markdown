@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LetterPress Trunk"
+title: "Letterpress Trunk"
 date: 2020-09-29
 categories: [front, woodworking, art]
 thumbnail: trunk.jpg
@@ -10,7 +10,6 @@ thumbnail: trunk.jpg
 
 This is a wooden trunk that I use to carry an antique Sigwalt / Baltimore letterpress.
 
-![post-image]({{site.url}}/assets/trunk1.jpg)
 
 This is made from baltic birch plywood and walnut bezels.
 

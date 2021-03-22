@@ -7,11 +7,11 @@ order: 5
 
 <div class="portfolio">
 
-  <h1 class="page-heading">Etc</h1>
+  <h1 class="page-heading">Art</h1>
 
   <div class="post-gallery">
     {% assign loopindex = 0 %}
-    {% for post in site.categories.etc %}
+    {% for post in site.categories.Art %}
     {% assign loopindex = loopindex | plus: 1 %}
     {% assign rowfinder = loopindex | modulo: 3 %}
     {% if rowfinder == 1 %}
