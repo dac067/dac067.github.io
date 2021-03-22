@@ -3,7 +3,7 @@ layout: post
 title:  "Broken Glass Case"
 date: 2015-06-5
 categories: woodworking
-thumbnail: emergency.jpg
+thumbnail: EmergencyThumb.jpg
 ---
 
 ![post-image]({{site.url}}/assets/emergency.jpg)
@@ -14,3 +14,5 @@ glass. Each pane of glass was spray painted with the text "In Case of Emergency 
 This piece was displayed at the Musuem of Contemporary Art San Diego on May 5, 2016.
 
 ![post-image]({{site.url}}/assets/emergency2.jpg)
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/gNM2TqvDebY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
