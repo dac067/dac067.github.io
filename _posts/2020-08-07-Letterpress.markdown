@@ -10,6 +10,8 @@ thumbnail: letterpress.jpg
 
 I recently bought an antique Baltimore Sigwalt Number 10 letterpress / printing press off Ebay.
 
+The chase is quite small, so I am currently using it to print my business cards for Etsy.
+
 ![post-image]({{site.url}}/assets/letterpress2.jpg)
 
 It was pretty rusted, but I restored it by soaking it in a vinegar bath and repainting with primer and enamel.
