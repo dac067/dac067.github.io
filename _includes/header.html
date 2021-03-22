@@ -4,6 +4,10 @@
 
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
+    <div>
+    <a class="page-link" href="https://www.etsy.com/shop/Fluxwood/">shop</a>
+    </div>
+
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
@@ -13,9 +17,6 @@
         </svg>
       </a>
 
-      <div>
-      <a class="page-link" href="https://www.etsy.com/shop/Fluxwood/">shop</a>
-      </div>
       <div class="trigger">
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for my_page in sorted_pages %}
