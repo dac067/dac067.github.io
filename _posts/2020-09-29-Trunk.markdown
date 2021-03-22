@@ -2,7 +2,7 @@
 layout: post
 title:  "LetterPress Trunk"
 date: 2020-09-29
-categories: woodworking, art
+categories: [front, woodworking, art]
 thumbnail: trunk.jpg
 ---
 
