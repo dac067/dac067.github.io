@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vintage Letterpress Machine"
-date: 2020-09-29
+date: 2020-08-07
 categories: [front, art]
 thumbnail: letterpress.jpg
 ---
@@ -10,13 +10,15 @@ thumbnail: letterpress.jpg
 
 I recently bought an antique Baltimore Sigwalt Number 10 letterpress / printing press off Ebay.
 
+![post-image]({{site.url}}/assets/letterpress5.jpg)
+
 It wasn't in a very good condition, so I opted to restore it.
 
-![post-image]({{site.url}}/assets/letterpress5.jpg)
+![post-image]({{site.url}}/assets/letterpress6.jpg)
 
 It was pretty rusted, but I restored it by soaking it in a vinegar bath and repainting with primer and enamel.
 
-![post-image]({{site.url}}/assets/letterpress6.jpg)
+![post-image]({{site.url}}/assets/letterpress8.jpg)
 
 I couldn't find any cheap rollers, so I opted to make my own.
 

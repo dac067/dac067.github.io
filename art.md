@@ -11,7 +11,7 @@ order: 5
 
   <div class="post-gallery">
     {% assign loopindex = 0 %}
-    {% for post in site.categories.Art %}
+    {% for post in site.categories.art %}
     {% assign loopindex = loopindex | plus: 1 %}
     {% assign rowfinder = loopindex | modulo: 3 %}
     {% if rowfinder == 1 %}
