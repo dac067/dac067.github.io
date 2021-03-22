@@ -36,4 +36,8 @@ For the lead type itself, I am using size 10 point Bembo made by Pat Reagh.
 
 ![post-image]({{site.url}}/assets/letterpress3.jpg)
 
+The chase is pretty small, but I am using it to print business cards for my Etsy store.
+
+I'm planning to use it to make a comic or zine someday.
+
 <iframe width="720" height="405" src="https://www.youtube.com/embed/o-4BcwMzj_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
