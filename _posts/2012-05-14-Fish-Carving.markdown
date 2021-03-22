@@ -2,7 +2,7 @@
 layout: post
 title:  "Fish Carving"
 date:   2011-06-19
-categories: [front, woodworking]
+categories: [front, woodworking,  art]
 tag: posts
 thumbnail: fish1.jpg
 ---

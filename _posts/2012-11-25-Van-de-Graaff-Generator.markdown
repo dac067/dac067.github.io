@@ -2,7 +2,7 @@
 layout: post
 title:  "Van de Graaff Generator"
 date:   2012-11-25
-categories: etc electronics
+categories: art electronics
 thumbnail: static1.jpg
 ---
 

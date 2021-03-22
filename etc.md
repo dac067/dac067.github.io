@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Etc
-permalink: /etc/
+title: Art
+permalink: /Art/
 order: 5
 ---
 

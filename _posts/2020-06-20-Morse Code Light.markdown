@@ -2,7 +2,7 @@
 layout: post
 title: "Morse Code Light"
 date: 2020-06-20
-categories: [front, electronics]
+categories: [front, electronics, art]
 thumbnail: morseLight.jpg
 ---
 
