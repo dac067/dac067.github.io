@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "LetterPress Trunk"
+date: 2020-09-29
+categories: woodworking, art
+thumbnail: trunk.jpg
+---
+
+![post-image]({{site.url}}/assets/trunk.jpg)
+
+This is a wooden trunk that I use to carry an antique Sigwalt / Baltimore letterpress.
+
+![post-image]({{site.url}}/assets/trunk1.jpg)
+
+This is made from baltic birch plywood and walnut bezels.
+
+![post-image]({{site.url}}/assets/trunk2.jpg)
+
+The logo on the front is from a linocut blockprint, that I converted into a screenprint.
+
+![post-image]({{site.url}}/assets/trunk3.jpg)
+
+The straps are made from leather.
+The leather is stitched directly into the wood.
+
+![post-image]({{site.url}}/assets/trunk4.jpg)
+
+![post-image]({{site.url}}/assets/trunk5.jpg)
