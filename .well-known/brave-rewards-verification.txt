@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: fluxwood.org
+Token: 773f912f697f3fd3a72563c2e5356718552f9dca59f96f13ddb1576ce6d22183
